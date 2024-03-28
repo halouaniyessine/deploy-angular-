@@ -1,0 +1,145 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "proj": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "standalone": false
+        },
+        "@schematics/angular:directive": {
+          "standalone": false
+        },
+        "@schematics/angular:pipe": {
+          "standalone": false
+        }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/proj",
+            "index": "src/index.html",
+            "browser": "src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "tsconfig.app.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.css",
+              "src/assets/styles/bootstrap-4.1.2/bootstrap.min.css",
+              "src/assets/plugins/font-awesome-4.7.0/css/font-awesome.css",
+              "src/assets/plugins/font-awesome-4.7.0/css/font-awesome.min.css",
+              "src/assets/plugins/flexslider/flexslider.css",
+              "src/assets/plugins/OwlCarousel2-2.2.1/animate.css",
+              "src/assets/plugins/OwlCarousel2-2.2.1/owl.carousel.css",
+              "src/assets/plugins/OwlCarousel2-2.2.1/owl.theme.default.css"
+            ],
+            "scripts": [
+              "src/assets/js/cart.js", 
+              "src/assets/styles/bootstrap-4.1.2/bootstrap.min.js",
+              "src/assets/styles/bootstrap-4.1.2/popper.js", 
+              "src/assets/js/category.js", 
+              "src/assets/js/jquery-3.2.1.min.js",
+              "src/assets/js/custom.js", 
+              "src/assets/js/checkout.js", 
+              "src/assets/js/product.js",
+              "src/assets/plugins/flexslider/jquery.flexslider-min.js", 
+              "src/assets/plugins/scrollmagic/ScrollMagic.min.js",
+              "src/assets/plugins/easing/easing.js", 
+              "src/assets/plugins/flexslider/jquery.flexslider-min.js",
+              "src/assets/plugins/greensock/animation.gsap.min.js", 
+              "src/assets/plugins/greensock/ScrollToPlugin.min.js", 
+              "src/assets/plugins/greensock/TimelineMax.min.js",
+              "src/assets/plugins/greensock/TweenMax.min.js", 
+              "src/assets/plugins/Isotope/fitcolumns.js",
+              "src/assets/plugins/Isotope/isotope.pkgd.min.js",
+              "src/assets/plugins/OwlCarousel2-2.2.1/owl.carousel.js",
+              "src/assets/plugins/parallax-js-master/parallax.min.js",
+              "src/assets/plugins/progressbar/progressbar.min.js",
+              "src/assets/plugins/scrollmagic/ScrollMagic.min.js"
+            ],
+            "server": "src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "server.ts"
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "proj:build:production"
+            },
+            "development": {
+              "buildTarget": "proj:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "proj:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "tsconfig.spec.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "4385b3af-c2dc-4922-beb2-167b9ee55094"
+  }
+}

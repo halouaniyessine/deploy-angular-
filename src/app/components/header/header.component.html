@@ -1,0 +1,109 @@
+
+<body>
+<header class="header">
+    <div class="header_overlay"></div>
+    <div class="header_content d-flex flex-row align-items-center justify-content-start">
+        <div class="logo">
+            <a href="#">
+                <div class="d-flex flex-row align-items-center justify-content-start">
+                    <div><img src="/assets/images/logo_1.png" alt=""></div>
+                    <div>modern clothes</div>
+                </div>
+            </a>	
+        </div>
+        <div class="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></div>
+        <nav class="main_nav">
+            <ul class="d-flex flex-row align-items-start justify-content-start">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">femme</a>
+                    <div class="submenu">
+                        <a routerLink="/jeans1">Jeans</a>
+                        <a routerLink="/Robes1">Robes</a>
+                        <a routerLink="/Jupes1">Jupes</a>
+                        <a routerLink="/Shorts1">Shorts</a>
+                        <a routerLink="/Pulls1">Pulls</a>
+                        <a routerLink="/jackets1">jackets</a>
+                        <a routerLink="/manteaux1">manteaux</a>
+                        <a routerLink="/baskets1">baskets</a>
+                        <a routerLink="/talons1">talons</a>
+                        <a routerLink="/sandales1">sandales</a>
+                        
+                    </div></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">homme</a>
+                     <div class="submenu">
+            <a routerLink="/jeans2">Jeans</a>
+            <a routerLink="/manteaux2">manteaux</a>
+            <a routerLink="/jackets2">jackets</a>
+            <a routerLink="/Shorts2">Shorts</a>
+            <a routerLink="/Pulls2">Pulls</a>
+            <a routerLink="/costumes2">costumes</a>
+            <a routerLink="/baskets2">baskets</a>
+            <a routerLink="/sandales2">sandales</a>
+        </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">enfant</a>
+                    <div class="submenu">
+                        <a routerLink="/jeans">Jeans</a>
+                        <a routerLink="/Robes">Robes</a>
+                        <a routerLink="/Jupes">Jupes</a>
+                        <a routerLink="/Shorts">Shorts</a>
+                        <a routerLink="Pulls">Pulls</a>
+                        <a routerLink="jackets">jackets</a>
+                        <a routerLink="manteaux">manteaux</a>
+                        <a routerLink="baskets">baskets</a>
+                        <a routerLink="sandales">sandales</a>
+                    </div></li>
+            </ul>
+        </nav>
+        <div class="header_right d-flex flex-row align-items-center justify-content-start ml-auto">
+            <!-- Search -->
+            <div class="header_search">
+                <form action="#" id="header_search_form">
+                    <input type="text" class="search_input" placeholder="Search Item" required="required">
+                    <button class="header_search_button"><img src="/assets/images/search.png" alt=""></button>
+                </form>
+            </div>
+            <!-- Cart -->
+            <div class="cart"><a href="cart.html"><div><img class="svg" src="/assets/images/cart.svg" alt="https://www.flaticon.com/authors/freepik"></div></a></div>
+            <!-- Phone -->
+            <div class="header_phone d-flex flex-row align-items-center justify-content-start">
+                <div><div><img src="/assets/images/phone.svg" alt="https://www.flaticon.com/authors/freepik"></div></div>
+                <div>+216 34322666</div>
+            </div>
+        </div>
+    </div>
+</header>
+<style>
+    /* Style pour le menu déroulant */
+    .nav-item {
+        position: relative;
+        display: inline-block;
+    }
+
+    .nav-item:hover .submenu {
+        display: block;
+    }
+
+    .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        padding: 10px;
+        z-index: 1;
+    }
+
+    .submenu a {
+        display: block;
+        color: #333;
+        text-decoration: none;
+        padding: 8px 16px;
+    }
+
+    .submenu a:hover {
+        background-color: #ddd;
+    }
+</style>
